@@ -2,6 +2,7 @@ import warnings
 
 from sklearn import metrics, linear_model, svm, ensemble
 from sklearn.neural_network import MLPClassifier
+import joblib
 
 warnings.filterwarnings('ignore')
 
@@ -63,3 +64,12 @@ class ModelTrainer:
         accuracy = self.train_model(classifier, self.x_train, self.y_train, self.x_test)
         self.accuracy_compare[self.svm_key] = accuracy
         print(print_text, accuracy)
+        self.chosen_model = classifier  # Set the chosen model to the classifier
+        self.save_model("MLmodel.joblib")  # Save the chosen model
+
+    def save_model(self, filename):
+        if self.chosen_model is not None:
+            joblib.dump(self.chosen_model, filename)
+            print("Model saved successfully.")
+        else:
+            print("No model chosen yet. Train and select a model first.")
