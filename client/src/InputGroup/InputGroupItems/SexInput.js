@@ -1,0 +1,55 @@
+import { Form } from "react-bootstrap";
+import { useEffect, useState } from "react";
+import styles from "../../styles/inputGroup.module.css";
+
+export default function SexInput({ userData, setUserData }) {
+    const [selectedSex, setSelectedSex] = useState(null);
+
+    useEffect(() => {
+        const storedSelectedSex = localStorage.getItem("selectedSex");
+        if (storedSelectedSex) {
+            setSelectedSex(parseInt(storedSelectedSex, 10));
+        }
+    }, []);
+
+    const handleSexChange = (event) => {
+        const sexValue = parseInt(event.target.value, 10);
+        setSelectedSex(sexValue);
+        const updatedUserData = [...userData];
+        updatedUserData[1] = sexValue;
+        setUserData(updatedUserData);
+        localStorage.setItem("selectedSex", sexValue.toString());
+    };
+
+
+    return (
+        <div className={styles.inputGroupSection}>
+            Select your sex:
+            <Form>
+                <div key={`default-checkbox`}>
+                    <Form.Check
+                        className="mx-4"
+                        inline
+                        type={"radio"}
+                        id={`male-checkbox`}
+                        label={`Male`}
+                        name="group1"
+                        value="1"
+                        checked={selectedSex === 1}
+                        onChange={handleSexChange}
+                    />
+                    <Form.Check
+                        inline
+                        type={"radio"}
+                        label={`Female`}
+                        id={`female-checkbox`}
+                        name="group1"
+                        value="2"
+                        checked={selectedSex === 2}
+                        onChange={handleSexChange}
+                    />
+                </div>
+            </Form>
+        </div>
+    );
+}

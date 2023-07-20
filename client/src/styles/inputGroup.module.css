@@ -1,0 +1,87 @@
+.inputGroupBody {
+    height: 90%;
+    width: 85%;
+    padding: 20px;
+    background-color: #81d5d5;
+    border-radius: 24px;
+    animation-duration: 1.5s;
+    animation-name: animate-pop;
+    animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+@keyframes animate-pop {
+    0% {
+        opacity: 0;
+        transform: scale(0.5, 0.5);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1, 1);
+    }
+}
+
+.inputGroupLabel {
+    text-align: center;
+    margin-top: 25px;
+    width: 100%;
+    height: 20%;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 45px;
+    animation-duration: 2s;
+    animation-name: animate-fade;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+    margin-bottom: 1%;
+}
+
+@keyframes animate-fade {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+.inputGroupSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 35px;
+    margin-bottom: 200px;
+    animation-duration: 2s;
+    animation-name: animate-fade;
+    animation-delay: 0s;
+    animation-fill-mode: backwards;
+}
+
+.rangeLabels {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    margin-top: 70px;
+}
+
+@media screen and (max-width: 800px) {
+    .inputGroupLabel {
+        font-size: 30px;
+        margin-bottom: 90px;
+    }
+
+    .inputGroupSection {
+        font-size: 25px;
+    }
+
+    .rangeLabels {
+        font-size: 15px;
+    }
+}
+
+
+.paginationStyle {
+    display: flex;
+    justify-content: center;
+}
