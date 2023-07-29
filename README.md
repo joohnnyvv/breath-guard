@@ -1,5 +1,5 @@
 
-# BreathGuard: AI-Powered Lung Cancer Risk Predictor
+# BreathGuard: AI-Powered Lung Cancer Risk Predictor (Work in Progress)
 
 The project uses a machine learning model created in a two-person group as part of a class at the university. I used the [Flask](https://flask.palletsprojects.com/en/2.3.x/) library to create the REST API. [Joblib](https://joblib.readthedocs.io/en/stable/) was used to load the machine learning model saved in .joblib format. The graphical interface is provided through an application written in [React](https://react.dev), using several libraries such as [react-bootstrap](https://react-bootstrap.netlify.app), and [react-icons](https://react-icons.github.io/react-icons/).
 
