@@ -38,5 +38,22 @@ This project includes a frontend built with React.js. To install the necessary d
 ```bash
   cd client
   npm install
-    
+```
+
+## Run Locally
+
+Follow these steps to run the project locally:
+
+### 1. Run ML Backend:
+First, navigate to the ML directory and run main.py to start the Python backend:
+```bash
+  cd ML
+  python main.py
+```
+### 2. Run React Frontend:
+Next, in a separate terminal or command prompt, navigate to the client directory and start the React frontend:
+```bash
+  cd client
+  npm start
+```   
     
