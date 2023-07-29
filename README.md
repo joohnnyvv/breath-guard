@@ -18,20 +18,25 @@ https://github.com/arix2000/MachineLearningProject
 
 To run this project locally, you need to have Python installed on your system. Follow these steps to install the required dependencies:
 
-### Install NumPy:
+### 1. Install NumPy:
 NumPy is a fundamental package for scientific computing with Python. It is a prerequisite for several libraries used in this project.
 ```bash
   pip install numpy
 ```
-### Install Joblib:
+### 2. Install Joblib:
 Joblib is a library for lightweight pipelining in Python. It is used for saving and loading machine learning models in this project.
 ```bash
   pip install joblib
 ```
-### Install Flask:
+### 3. Install Flask:
 Flask is a micro web framework used for building web applications and APIs in Python.
 ```bash
   pip install flask
 ```
+### 4. Install Client Dependencies:
+This project includes a frontend built with React.js. To install the necessary dependencies for the frontend, navigate to the "client" directory and run the following command:
+```bash
+  cd client
+  npm install
     
     
