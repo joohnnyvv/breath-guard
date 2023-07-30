@@ -2,8 +2,7 @@
 .homePageBody {
     display: flex;
     justify-content: center;
-    padding-top: 80px;
     width: 100%;
     height: 100vh;
-    background-color: beige;
+    background-color: #322653;
 }

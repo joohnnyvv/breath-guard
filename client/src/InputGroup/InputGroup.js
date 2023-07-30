@@ -6,6 +6,7 @@ import ResultModal from "../ResultModal/ResultModal";
 import {Pagination, Button} from "react-bootstrap";
 import {useEffect, useState} from "react";
 import {FiArrowRight, FiArrowLeft} from "react-icons/fi";
+import "../styles/custom-pagination.css";
 
 export default function InputGroup() {
     const [userData, setUserData] = useState([]);
@@ -134,7 +135,7 @@ export default function InputGroup() {
             </div>
             <div className={styles.paginationStyle}>
                 <Button
-                    className="mx-3"
+                    className={`mx-3 ${styles.paginationButton}`}
                     style={{height: "37px", display: "flex", alignItems: "center"}}
                     onClick={() => {
                         activePage > 1 && setActivePage(activePage - 1);
@@ -145,7 +146,7 @@ export default function InputGroup() {
                 <Pagination>{pageItems}</Pagination>
                 <Button
                     disabled={activePage > userData.length}
-                    className="mx-3"
+                    className={`mx-3 ${styles.paginationButton}`}
                     style={{height: "37px", display: "flex", alignItems: "center"}}
                     onClick={() => {
                         activePage < 8 && setActivePage(activePage + 1);
