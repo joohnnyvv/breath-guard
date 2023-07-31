@@ -126,12 +126,6 @@ export default function InputGroup() {
                                 dataIndex={7}
                                 localStorageItemName="selectedPassiveSmokingAmount"/>
                 )}
-                {activePage === 8 &&
-                    <Button disabled={activePage > userData.length} variant="success" className={styles.confirmButton}
-                            onClick={handleDataSubmit}>
-                        Evaluate the risk
-                    </Button>
-                }
             </div>
             <div className={styles.paginationStyle}>
                 <Button
@@ -152,7 +146,7 @@ export default function InputGroup() {
                         activePage < 8 && setActivePage(activePage + 1);
                     }}
                 >
-                    <FiArrowRight/>
+                    {activePage === 8 ? "Assess your risk" : <FiArrowRight/>}
                 </Button>
             </div>
             <ResultModal

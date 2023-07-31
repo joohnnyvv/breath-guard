@@ -1,7 +1,7 @@
 .inputGroupBody {
     height: 60%;
     width: 85%;
-    padding: 90px;
+    padding: 40px;
     background-color: #FFD2D7;
     border-radius: 24px;
     animation-duration: 1.5s;
@@ -12,7 +12,8 @@
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    margin-top: 80px;
+    margin-top: 10px;
+    z-index: 1;
 }
 
 @keyframes animate-pop {
@@ -32,10 +33,10 @@
     width: 70%;
     height: 20%;
     font-family: 'PT Serif', serif;
-    font-size: 45px;
-    animation-duration: 2s;
+    font-size: 40px;
+    animation-duration: 1s;
     animation-name: animate-fade;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
     animation-fill-mode: backwards;
 }
 
@@ -49,11 +50,11 @@
     flex-direction: column;
     align-items: center;
     font-family: 'PT Serif', serif;
-    font-size: 35px;
-    margin-bottom: 0px;
-    animation-duration: 2s;
+    font-size: 32px;
+    margin-top: 90px;
+    animation-duration: 1s;
     animation-name: animate-fade;
-    animation-delay: 0s;
+    animation-delay: 1.5s;
     animation-fill-mode: backwards;
 }
 
@@ -61,8 +62,8 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    font-size: 20px;
-    margin-top: 70px;
+    font-size: 18px;
+    margin-top: 20px;
 }
 
 .inputArea {
@@ -71,14 +72,23 @@
     top: 350px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 835px) {
+    .inputGroupBody {
+        height: 75%;
+        width: 100%;
+        margin-top: 25%;
+        border-radius: 0;
+        position: absolute;
+        left: 0;
+    }
     .inputGroupLabel {
-        font-size: 30px;
+        font-size: 25px;
         margin-bottom: 90px;
     }
 
     .inputGroupSection {
         font-size: 25px;
+        margin-top: 40px;
     }
 
     .rangeLabels {
