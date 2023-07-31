@@ -135,8 +135,8 @@ export default function InputGroup() {
             </div>
             <div className={styles.paginationStyle}>
                 <Button
-                    className={`mx-3 ${styles.paginationButton}`}
-                    style={{height: "37px", display: "flex", alignItems: "center"}}
+                    className="mx-3"
+                    style={{height: "37px", display: "flex", alignItems: "center", backgroundColor: "#8062D6", borderColor: "#8062D6"}}
                     onClick={() => {
                         activePage > 1 && setActivePage(activePage - 1);
                     }}
@@ -146,8 +146,8 @@ export default function InputGroup() {
                 <Pagination>{pageItems}</Pagination>
                 <Button
                     disabled={activePage > userData.length}
-                    className={`mx-3 ${styles.paginationButton}`}
-                    style={{height: "37px", display: "flex", alignItems: "center"}}
+                    className="mx-3"
+                    style={{height: "37px", display: "flex", alignItems: "center", backgroundColor: "#8062D6", borderColor: "#8062D6"}}
                     onClick={() => {
                         activePage < 8 && setActivePage(activePage + 1);
                     }}
