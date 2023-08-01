@@ -59,4 +59,11 @@ Next, in a separate terminal or command prompt, navigate to the client directory
   cd client
   npm start
 ```   
-    
+
+## Screenshots
+| Desktop View                                          | Mobile View                                          |
+|-------------------------------------------------------|------------------------------------------------------|
+| ![Desktop1](ss/Zrzut ekranu 2023-08-1 o 18.49.00.png) | ![Mobile1](ss/Zrzut ekranu 2023-08-1 o 18.50.47.png) |
+| ![Desktop2](ss/Zrzut ekranu 2023-08-1 o 18.49.26.png) | ![Mobile2](ss/Zrzut ekranu 2023-08-1 o 18.50.26.png) |
+| ![Desktop3](ss/Zrzut ekranu 2023-08-1 o 18.49.38.png) | ![Mobile3](ss/Zrzut ekranu 2023-08-1 o 18.50.55.png) |
+|                                                       | ![Mobile4](ss/Zrzut ekranu 2023-08-1 o 18.50.34.png) |

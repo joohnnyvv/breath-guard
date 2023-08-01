@@ -1,17 +1,19 @@
 .navBarBody {
-    background-color: #FFD2D7;
+    background-color: #E9B384;
     font-family: 'PT Serif', serif;
+    border-bottom: solid 2px #090a29;
 }
 
-.loginButton {
-    background-color: #322653;
-    border-radius: 12px;
-    color: #ffffff;
-    width: 100px;
-    text-align: center;
+.mailIcon {
+    margin-left: 50px;
 }
 
-.loginButton:hover {
-    background-color: #FFD2D7;
-    outline: #090a29 solid 2px;
+@media (max-width: 991px) {
+    .mailIcon {
+        margin-left: 0;
+    }
+
+    .navBarBody {
+        border-bottom: solid 2px #090a29;
+    }
 }

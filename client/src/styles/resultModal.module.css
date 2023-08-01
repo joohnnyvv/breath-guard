@@ -4,17 +4,21 @@
 }
 
 .modalHeader {
-    background-color: #322653;
+    background-color: #7C9D96;
     font-family: 'PT Serif', serif;
-    color: #ffffff;
+    color: #F4F2DE;
+    border: #090a29 solid 2px !important;
 }
 
 .modalBody {
-    background-color: #322653;
+    background-color: #7C9D96;
+    border-left: #090a29 solid 2px;
+    border-right: #090a29 solid 2px;
 }
 
 .modalFooter {
-    background-color: #322653;
+    background-color: #7C9D96 !important;
+    border: #090a29 solid 2px !important;
 }
 
 .resultAlert {
@@ -23,11 +27,13 @@
 }
 
 .closeButton {
-    background-color: #9288F8;
-    border-color: #9288F8;
+    background-color: #F4F2DE !important;
+    border-color: #F4F2DE !important;
+    color: #090a29 !important;
 }
 
 .closeButton:hover {
-    background-color: #8062D6;
-    border-color: #090a29;
+    background-color: #A1CCD1 !important;
+    border-color: #090a29 !important;
+    color: #ffffff !important;
 }

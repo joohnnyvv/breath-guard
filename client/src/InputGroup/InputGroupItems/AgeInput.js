@@ -1,7 +1,6 @@
 import Form from "react-bootstrap/Form";
 import {useEffect, useState} from "react";
 import styles from "../../styles/inputGroup.module.css";
-import "../../styles/custom-form.css";
 
 export default function AgeInput({userData, setUserData}) {
 

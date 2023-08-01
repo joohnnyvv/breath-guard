@@ -14,13 +14,15 @@ export default function NavBar() {
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="me-auto">
                         </Nav>
-                        <Nav>
-                            <Nav.Link className={styles.loginButton}>Log In</Nav.Link>
+                        <Nav style={{textAlign: "center"}}>
+                            <Nav.Link>Log In</Nav.Link>
                             <Nav.Link>Register</Nav.Link>
+                        </Nav>
+                        <Nav style={{display: "flex", justifyContent: "center"}} className="d-flex flex-row">
                             <Nav.Link
                                 href='mailto:janekrembikowski@gmail.com?subject=Question about the BreathGuard app'
                                 target="_blank">
-                                <AiOutlineMail style={{height: "30px", width: "auto", marginLeft: "50px"}}/>
+                                <AiOutlineMail style={{height: "30px", width: "auto"}} className={styles.mailIcon}/>
                             </Nav.Link>
                             <Nav.Link href="https://github.com/joohnnyvv" target="_blank">
                                 <FaGithubSquare style={{height: "30px", width: "auto"}}/>

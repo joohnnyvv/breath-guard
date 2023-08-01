@@ -2,7 +2,7 @@
     height: 60%;
     width: 85%;
     padding: 40px;
-    background-color: #FFD2D7;
+    background-color: #E9B384;
     border-radius: 24px;
     animation-duration: 1.5s;
     animation-name: animate-pop;
@@ -13,6 +13,7 @@
     align-items: center;
     text-align: center;
     margin-top: 10px;
+    border: solid 2px #090a29;
     z-index: 1;
 }
 
@@ -51,10 +52,10 @@
     align-items: center;
     font-family: 'PT Serif', serif;
     font-size: 32px;
-    margin-top: 70px;
-    animation-duration: 1s;
+    margin-top: 0;
+    animation-duration: 2s;
     animation-name: animate-fade;
-    animation-delay: 1.5s;
+    animation-delay: 0s;
     animation-fill-mode: backwards;
 }
 
@@ -68,8 +69,6 @@
 
 .inputArea {
     width: 60%;
-    position: fixed;
-    top: 350px;
 }
 
 @media screen and (max-width: 835px) {
@@ -83,12 +82,17 @@
     }
     .inputGroupLabel {
         font-size: 25px;
-        margin-bottom: 90px;
+        margin-bottom: 0;
+        width: 100%;
     }
 
     .inputGroupSection {
         font-size: 25px;
-        margin-top: 40px;
+        margin-top: 0;
+    }
+
+    .inputArea {
+        width: 100%;
     }
 
     .rangeLabels {

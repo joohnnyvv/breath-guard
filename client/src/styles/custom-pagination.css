@@ -1,10 +1,10 @@
 .page-item:not(.active) .page-link {
-    background-color: #9288F8;
-    border-color: #9288F8;
+    background-color: #F4F2DE;
+    border-color: #090a29;
     color: #090a29;
 }
 .page-item.active .page-link {
-    background-color: #090a29;
-    border-color: #090a29;
+    background-color: #7C9D96 !important;
+    border-color: #090a29 !important;
     color: #ffffff;
 }

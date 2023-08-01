@@ -130,23 +130,23 @@ export default function InputGroup() {
             <div className={styles.paginationStyle}>
                 <Button
                     className="mx-3"
-                    style={{height: "37px", display: "flex", alignItems: "center", backgroundColor: "#8062D6", borderColor: "#8062D6"}}
+                    style={{height: "30px", display: "flex", alignItems: "center", backgroundColor: "#7C9D96", borderColor: "#090a29"}}
                     onClick={() => {
                         activePage > 1 && setActivePage(activePage - 1);
                     }}
                 >
                     <FiArrowLeft/>
                 </Button>
-                <Pagination>{pageItems}</Pagination>
+                <Pagination size="sm">{pageItems}</Pagination>
                 <Button
                     disabled={activePage > userData.length}
                     className="mx-3"
-                    style={{height: "37px", display: "flex", alignItems: "center", backgroundColor: "#8062D6", borderColor: "#8062D6"}}
+                    style={{height: "30px", display: "flex", alignItems: "center", backgroundColor: "#7C9D96", borderColor: "#090a29"}}
                     onClick={() => {
                         activePage < 8 ? setActivePage(activePage + 1) : handleDataSubmit();
                     }}
                 >
-                    {activePage === 8 ? "Assess your risk" : <FiArrowRight/>}
+                    {activePage === 8 ? "Confirm" : <FiArrowRight/>}
                 </Button>
             </div>
             <ResultModal
