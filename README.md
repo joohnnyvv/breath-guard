@@ -50,7 +50,7 @@ Follow these steps to run the project locally:
 #### 1. Run ML Backend:
 First, navigate to the ML directory and run main.py to start the Python backend:
 ```bash
-  cd ML
+  cd ml_model
   python main.py
 ```
 #### 2. Run React Frontend:
