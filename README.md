@@ -63,7 +63,7 @@ Next, in a separate terminal or command prompt, navigate to the client directory
 ## Screenshots
 | Desktop View                                          | Mobile View                                          |
 |-------------------------------------------------------|------------------------------------------------------|
-| ![Desktop1](ss/Zrzut ekranu 2023-08-1 o 18.49.00.png) | ![Mobile1](ss/Zrzut ekranu 2023-08-1 o 18.50.47.png) |
-| ![Desktop2](ss/Zrzut ekranu 2023-08-1 o 18.49.26.png) | ![Mobile2](ss/Zrzut ekranu 2023-08-1 o 18.50.26.png) |
-| ![Desktop3](ss/Zrzut ekranu 2023-08-1 o 18.49.38.png) | ![Mobile3](ss/Zrzut ekranu 2023-08-1 o 18.50.55.png) |
-|                                                       | ![Mobile4](ss/Zrzut ekranu 2023-08-1 o 18.50.34.png) |
+| ![Desktop1](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.49.00.png) | ![Mobile1](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.50.47.png) |
+| ![Desktop2](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.49.26.png) | ![Mobile2](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.50.26.png) |
+| ![Desktop3](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.49.38.png) | ![Mobile3](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.50.55.png) |
+|                                                       | ![Mobile4](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.50.34.png) |
