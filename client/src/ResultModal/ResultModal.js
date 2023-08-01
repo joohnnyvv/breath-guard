@@ -8,13 +8,14 @@ export default function ResultModal(props) {
             size="lg"
             aria-labelledby="contained-modal-title-vcenter"
             centered
+            className={styles.modalFullBody}
         >
-            <Modal.Header closeButton>
-                <Modal.Title className={styles.modalHeader} id="contained-modal-title-vcenter">
+            <Modal.Header closeButton className={styles.modalHeader}>
+                <Modal.Title id="contained-modal-title-vcenter">
                     ENTERED DATA SUGGESTS THAT:
                 </Modal.Title>
             </Modal.Header>
-            <Modal.Body>
+            <Modal.Body className={styles.modalBody}>
                 <Alert variant={props.variant} className={styles.resultAlert}>
                     {props.variant === "success" &&
                         <div>Congratulations! The risk of lung cancer in your case is low.
@@ -29,8 +30,8 @@ export default function ResultModal(props) {
                             late!</div>}
                 </Alert>
             </Modal.Body>
-            <Modal.Footer>
-                <Button onClick={props.onHide}>Close</Button>
+            <Modal.Footer className={styles.modalFooter}>
+                <Button onClick={props.onHide} className={styles.closeButton}>Close</Button>
             </Modal.Footer>
         </Modal>
     )

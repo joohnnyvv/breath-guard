@@ -51,7 +51,7 @@
     align-items: center;
     font-family: 'PT Serif', serif;
     font-size: 32px;
-    margin-top: 90px;
+    margin-top: 70px;
     animation-duration: 1s;
     animation-name: animate-fade;
     animation-delay: 1.5s;
@@ -63,7 +63,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .inputArea {

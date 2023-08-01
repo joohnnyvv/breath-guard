@@ -1,0 +1,15 @@
+{
+  "name": "BreathGuard: AI-Powered Lung Cancer Risk Predictor ",
+  "description": "The application allows users to assess their lung cancer risk using a machine learning model.",
+  "start_url": "/",
+  "lang": "pl-PL",
+  "theme_color": "#9288F8",
+  "display": "browser",
+  "icons": [
+    {
+      "src": "/logo1.png",
+      "sizes": "917x347",
+      "type": "image/png"
+    }
+  ]
+}

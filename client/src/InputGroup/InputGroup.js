@@ -143,7 +143,7 @@ export default function InputGroup() {
                     className="mx-3"
                     style={{height: "37px", display: "flex", alignItems: "center", backgroundColor: "#8062D6", borderColor: "#8062D6"}}
                     onClick={() => {
-                        activePage < 8 && setActivePage(activePage + 1);
+                        activePage < 8 ? setActivePage(activePage + 1) : handleDataSubmit();
                     }}
                 >
                     {activePage === 8 ? "Assess your risk" : <FiArrowRight/>}

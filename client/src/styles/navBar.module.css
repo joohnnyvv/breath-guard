@@ -1,0 +1,17 @@
+.navBarBody {
+    background-color: #FFD2D7;
+    font-family: 'PT Serif', serif;
+}
+
+.loginButton {
+    background-color: #322653;
+    border-radius: 12px;
+    color: #ffffff;
+    width: 100px;
+    text-align: center;
+}
+
+.loginButton:hover {
+    background-color: #FFD2D7;
+    outline: #090a29 solid 2px;
+}
