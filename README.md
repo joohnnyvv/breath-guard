@@ -63,7 +63,7 @@ Next, in a separate terminal or command prompt, navigate to the client directory
 ## Screenshots
 | Desktop View                                          | Mobile View                                          |
 |-------------------------------------------------------|------------------------------------------------------|
-| ![Desktop1](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.49.00.png) | ![Mobile1](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.50.47.png) |
-| ![Desktop2](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.49.26.png) | ![Mobile2](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.50.26.png) |
-| ![Desktop3](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.49.38.png) | ![Mobile3](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.50.55.png) |
-|                                                       | ![Mobile4](https://github.com/joohnnyvv/breath-guard/blob/master/ss/Zrzut%20ekranu%202023-08-1%20o%2018.50.34.png) |
+| ![Desktop1](https://github.com/joohnnyvv/breath-guard/assets/110868938/739ad801-fe91-4b0a-80a1-f35f43659621) | ![Mobile1](https://github.com/joohnnyvv/breath-guard/assets/110868938/24bcaf33-d872-405f-bc92-59a01e56ea49) |
+| ![Desktop2](https://github.com/joohnnyvv/breath-guard/assets/110868938/71e72ac8-fcb9-46a8-8242-baad967ad364") | ![Mobile2](https://github.com/joohnnyvv/breath-guard/assets/110868938/cfb7445e-0b38-44df-817e-e434e301cdb7) |
+| ![Desktop3](https://github.com/joohnnyvv/breath-guard/assets/110868938/74805448-ef68-47a1-b47f-e9aae1a4d145) | ![Mobile3](https://github.com/joohnnyvv/breath-guard/assets/110868938/5da57fa9-26e5-47c2-82e6-d47955803bf7) |
+|                                                       | ![Mobile4](https://github.com/joohnnyvv/breath-guard/assets/110868938/a8d5a75a-01e3-419f-b94f-87a2a8b520f1) |
