@@ -8,6 +8,7 @@ The project uses a machine learning model created in a two-person group as part 
 - [Related](#related)
 - [Installation](#installation)
 - [Run Locally](#run-locally)
+- [Screenshots](#screenshots)
 
 ## Related
 
