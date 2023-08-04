@@ -1,10 +1,17 @@
 import {Navbar, Nav, Container} from "react-bootstrap";
+import LoginModal from "../AccountMgmt/LoginModal";
+import RegisterModal from "../AccountMgmt/RegisterModal";
 import logo from "../assets/logo1.png";
 import styles from "../styles/navBar.module.css";
 import {AiOutlineMail, AiFillPhone, AiFillLinkedin} from "react-icons/ai";
 import {FaGithubSquare} from "react-icons/fa";
+import {useState} from "react";
 
 export default function NavBar() {
+
+    const [loginModalShow, setLoginModalShow] = useState(false);
+    const [registerModalShow, setRegisterModalShow] = useState(false);
+
     return (
         <div style={{position: "absolute", top: "0", width: "100vw", zIndex: "2"}}>
             <Navbar collapseOnSelect expand="lg" className={styles.navBarBody}>
@@ -15,8 +22,8 @@ export default function NavBar() {
                         <Nav className="me-auto">
                         </Nav>
                         <Nav style={{textAlign: "center"}}>
-                            <Nav.Link>Log In</Nav.Link>
-                            <Nav.Link>Register</Nav.Link>
+                            <Nav.Link onClick={() => setLoginModalShow(true)}>Log In</Nav.Link>
+                            <Nav.Link onClick={() => setRegisterModalShow(true)}>Register</Nav.Link>
                         </Nav>
                         <Nav style={{display: "flex", justifyContent: "center"}} className="d-flex flex-row">
                             <Nav.Link
@@ -37,5 +44,13 @@ export default function NavBar() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+            <LoginModal
+            show={loginModalShow}
+            onHide={() => setLoginModalShow(false)}
+            />
+            <RegisterModal
+            show={registerModalShow}
+            onHide={() => setRegisterModalShow(false)}
+            />
         </div>)
 }
