@@ -1,6 +1,7 @@
 import { Form } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import styles from "../../styles/inputGroup.module.css";
+import "../../styles/custom-form-check.css";
 
 export default function SexInput({ userData, setUserData }) {
     const [selectedSex, setSelectedSex] = useState(null);
@@ -28,7 +29,7 @@ export default function SexInput({ userData, setUserData }) {
             <Form>
                 <div key={`default-checkbox`}>
                     <Form.Check
-                        className="mx-4"
+                        className="mx-4 custom-checkbox"
                         inline
                         type={"radio"}
                         id={`male-checkbox`}
@@ -40,6 +41,7 @@ export default function SexInput({ userData, setUserData }) {
                     />
                     <Form.Check
                         inline
+                        className="custom-checkbox"
                         type={"radio"}
                         label={`Female`}
                         id={`female-checkbox`}

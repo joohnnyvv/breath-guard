@@ -1,0 +1,66 @@
+.modalFullBody {
+    font-family: 'Lato', sans-serif;
+    color: #000000;
+    backdrop-filter: blur(4px);
+}
+
+.modalHeader {
+    background-color: #ecdabe;
+    border: #090a29 solid 2px !important;
+}
+
+.modalBody {
+    background-color: #ecdabe;
+    border-left: #090a29 solid 2px;
+    border-right: #090a29 solid 2px;
+}
+
+.modalFooter {
+    background-color: #ecdabe !important;
+    border: #090a29 solid 2px !important;
+}
+
+.closeButton {
+    background-color: #6884a9 !important;
+    border: 0 !important;
+    color: #ffffff !important;
+}
+
+.closeButton:hover {
+    background-color: #354a67 !important;
+    border-color: #090a29 !important;
+    color: #ffffff !important;
+}
+
+.submitButton {
+    background-color: #598565 !important;
+    border: 0 !important;
+    color: #ffffff !important;
+}
+
+.submitButton:hover {
+    background-color: #395747 !important;
+    border: 0 !important;
+    color: #ffffff !important;
+}
+
+.instructions {
+    margin-top: 10px;
+    background-color: #f89090;
+    padding: 9px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.offscreen {
+    position: absolute !important;
+    left: -9999px !important;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.invalidBorder {
+    border-color: #c55b5b !important;
+}

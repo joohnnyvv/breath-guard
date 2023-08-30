@@ -2,10 +2,9 @@
 .homePageBody {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100vh;
-    background-color: #7C9D96;
+    background-color: #79a6b7;
     padding: 0;
 }

@@ -1,6 +1,7 @@
-import {Form, Button} from "react-bootstrap";
+import {Form} from "react-bootstrap";
 import styles from "../../styles/inputGroup.module.css";
 import {useEffect, useState} from "react";
+import "../../styles/custom-range.css";
 
 export default function RangeInput({
                                        userData,
@@ -41,7 +42,7 @@ export default function RangeInput({
                     {maxLabel}
                 </Form.Label>
             </div>
-            <Form.Range style={{marginBottom: 0, width: "80%"}} min={1} max={8} onChange={handleValueChange}
+            <Form.Range min={1} max={8} onChange={handleValueChange}
                         value={selectedValue}/>
         </div>
     )
