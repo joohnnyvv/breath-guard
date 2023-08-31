@@ -1,7 +1,7 @@
 import {Form} from "react-bootstrap";
-import styles from "../../styles/inputGroup.module.css";
+import styles from "../../../styles/inputGroup.module.css";
 import {useEffect, useState} from "react";
-import "../../styles/custom-range.css";
+import "../../../styles/custom-range.css";
 
 export default function RangeInput({
                                        userData,

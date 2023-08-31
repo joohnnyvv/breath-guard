@@ -1,5 +1,5 @@
 import {Modal, Button, Form} from "react-bootstrap";
-import styles from "../styles/accountMgmt.module.css";
+import styles from "../../styles/accountMgmt.module.css";
 import {useEffect, useRef, useState} from "react";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;

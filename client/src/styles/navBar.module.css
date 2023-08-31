@@ -1,19 +1,10 @@
 .navBarBody {
-    background-color: #ecdabe;
-    font-family: 'Lato', sans-serif;
-    border-bottom: solid 2px #090a29;
+    height: 10vh;
+    background-color: #B5B9C9;
+    font-family: 'Roboto Slab', serif;
+    font-size: 20px;
 }
 
 .mailIcon {
     margin-left: 50px;
-}
-
-@media (max-width: 991px) {
-    .mailIcon {
-        margin-left: 0;
-    }
-
-    .navBarBody {
-        border-bottom: solid 2px #090a29;
-    }
 }

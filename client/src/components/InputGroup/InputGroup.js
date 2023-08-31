@@ -1,4 +1,4 @@
-import styles from "../styles/inputGroup.module.css";
+import styles from "../../styles/inputGroup.module.css";
 import AgeInput from "./InputGroupItems/AgeInput";
 import SexInput from "./InputGroupItems/SexInput";
 import RangeInput from "./InputGroupItems/RangeInput";
@@ -6,7 +6,7 @@ import ResultModal from "../ResultModal/ResultModal";
 import {Pagination, Button} from "react-bootstrap";
 import {useEffect, useState} from "react";
 import {FiArrowRight, FiArrowLeft} from "react-icons/fi";
-import "../styles/custom-pagination.css";
+import "../../styles/custom-pagination.css";
 
 export default function InputGroup() {
     const [userData, setUserData] = useState([]);
@@ -130,7 +130,7 @@ export default function InputGroup() {
             <div className={styles.paginationStyle}>
                 <Button
                     className="mx-3"
-                    style={{height: "30px", display: "flex", alignItems: "center", backgroundColor: "#7C9D96", borderColor: "#090a29"}}
+                    style={{height: "30px", display: "flex", alignItems: "center", backgroundColor: "#cccccc", borderColor: "#cccccc"}}
                     onClick={() => {
                         activePage > 1 && setActivePage(activePage - 1);
                     }}
@@ -141,7 +141,7 @@ export default function InputGroup() {
                 <Button
                     disabled={activePage > userData.length}
                     className="mx-3"
-                    style={{height: "30px", display: "flex", alignItems: "center", backgroundColor: "#7C9D96", borderColor: "#090a29"}}
+                    style={{height: "30px", display: "flex", alignItems: "center", backgroundColor: "#cccccc", borderColor: "#cccccc"}}
                     onClick={() => {
                         activePage < 8 ? setActivePage(activePage + 1) : handleDataSubmit();
                     }}

@@ -4,7 +4,7 @@
     color: #090a29;
 }
 .page-item.active .page-link {
-    background-color: #7C9D96 !important;
+    background-color: #cccccc !important;
     border-color: #090a29 !important;
-    color: #ffffff;
+    color: #090a29;
 }

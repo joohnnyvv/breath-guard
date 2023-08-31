@@ -1,5 +1,5 @@
 import {Modal, Button, Form} from "react-bootstrap";
-import styles from "../styles/accountMgmt.module.css";
+import styles from "../../styles/accountMgmt.module.css";
 
 export default function RegisterModal(props) {
     return (

@@ -1,5 +1,5 @@
 import {Modal, Button, Alert} from "react-bootstrap";
-import styles from "../styles/resultModal.module.css";
+import styles from "../../styles/resultModal.module.css";
 
 export default function ResultModal(props) {
     return (
