@@ -1,5 +1,5 @@
 input[type="range"]::-webkit-slider-thumb {
-    background: #79a6b7 !important;
+    background: #ffffff !important;
     border: solid 1px #000000;
 }
 
@@ -9,4 +9,8 @@ input[type="range"]::-moz-range-thumb {
 
 input[type="range"]::-ms-thumb {
     background: #79a6b7 !important;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to left, #c97d7d, #70a486);
 }

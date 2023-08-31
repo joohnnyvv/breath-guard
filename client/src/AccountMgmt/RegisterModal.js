@@ -43,6 +43,18 @@ export default function RegisterModal(props) {
         setErrorMsg('');
     }, [userName, pwd, matchPwd])
 
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const v1 = USER_REGEX.test(userName);
+        const v2 = PWD_REGEX.test(pwd);
+        if (!v1 || !v2) {
+            setErrorMsg("Invalid Entry");
+            return;
+        }
+        console.log(userName, pwd);
+        setSuccess(true);
+    }
+
     return (
         <div>
             <Modal
@@ -52,81 +64,104 @@ export default function RegisterModal(props) {
                 centered
                 className={styles.modalFullBody}
             >
-                <Modal.Header closeButton className={styles.modalHeader}>
-                    <Modal.Title id="contained-modal-title-vcenter">
-                        Enter login details
-                    </Modal.Title>
-                </Modal.Header>
-                <Modal.Body className={styles.modalBody}>
-                    <Form.Label htmlFor="username">Login:</Form.Label>
-                    <Form.Control
-                        className={`${userFocus && userName && !validName ?
-                            styles.invalidBorder : ''}`}
-                        type="text"
-                        id="username"
-                        ref={userRef}
-                        autoComplete="off"
-                        onChange={(e) => setUserName(e.target.value)}
-                        required
-                        aria-invalid={validName ? "false" : "true"}
-                        aria-describedby="uidnote"
-                        onFocus={() => setUserFocus(true)}
-                        onBlur={() => setUserFocus(false)}
-                    />
-                    <p id="uidnote" className={`${userFocus && userName && !validName ?
-                        styles.instructions : styles.offscreen}`}>
-                        4 to 24 characters.<br/>
-                        Must begin with a letter.<br/>
-                        Letters, numbers, underscores, hyphens allowed.
-                    </p>
-                    <Form.Label htmlFor="password">Password:</Form.Label>
-                    <Form.Control
-                        className={`${pwdFocus && !validPwd ?
-                            styles.invalidBorder : ''}`}
-                        type="password"
-                        id="password"
-                        onChange={(e) => setPwd(e.target.value)}
-                        required
-                        aria-invalid={validPwd ? "false" : "true"}
-                        aria-describedby="pwdnote"
-                        onFocus={() => setPwdFocus(true)}
-                        onBlur={() => setPwdFocus(false)}
-                    />
-                    <p id="pwdnote" className={`${pwdFocus && !validPwd ?
-                        styles.instructions : styles.offscreen}`}>
-                        8 to 24 characters.<br/>
-                        Must include uppercase and lowercase letters, a number and a special
-                        character.<br/>
-                        Allowed special characters:
-                        <span aria-label="exclamation mark">!</span>
-                        <span aria-label="at symbol">@</span>
-                        <span aria-label="hashtag">#</ span>
-                        <span aria-label="dollar sign">$</span>
-                        <span aria-label="percent">%</span>
-                    </p>
-                    <Form.Label htmlFor="inputPassword">Repeat password:</Form.Label>
-                    <Form.Control
-                        className={`${matchPwdFocus && !validMatchPwd ?
-                            styles.invalidBorder : ''}`}
-                        type="password"
-                        id="confirm_pwd"
-                        onChange={(e) => setMatchPwd(e.target.value)}
-                        required
-                        aria-invalid={validMatchPwd ? "false" : "true"}
-                        aria-describedby="confirmnote"
-                        onFocus={() => setMatchPwdFocus(true)}
-                        onBlur={() => setMatchPwdFocus(false)}
-                    />
-                    <p id="confirmnote" className={`${matchPwdFocus && !validMatchPwd ?
-                        styles.instructions : styles.offscreen}`}>
-                        Passwords don't match.
-                    </p>
-                </Modal.Body>
-                <Modal.Footer className={styles.modalFooter}>
-                    <Button className={styles.submitButton}
-                            disabled={!validName || !validPwd || !validMatchPwd}>Register</Button>
-                    <Button className={styles.closeButton} onClick={props.onHide}>Close</Button>
-                </Modal.Footer>
+                <Form onSubmit={handleSubmit}>
+                    <Modal.Header closeButton className={styles.modalHeader}>
+                        <Modal.Title id="contained-modal-title-vcenter">
+                            Enter login details
+                        </Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body className={styles.modalBody}>
+                        <p className={`${errMsg ?
+                            styles.instructions : styles.offscreen}`}>
+                            {errMsg}
+                        </p>
+                        <Form.Label htmlFor="username">Login:</Form.Label>
+                        <Form.Control
+                            className={`${userFocus && userName && !validName ?
+                                styles.invalidBorder : ''}`}
+                            type="text"
+                            id="username"
+                            ref={userRef}
+                            autoComplete="off"
+                            onChange={(e) => setUserName(e.target.value)}
+                            required
+                            aria-invalid={validName ? "false" : "true"}
+                            aria-describedby="uidnote"
+                            onFocus={() => setUserFocus(true)}
+                            onBlur={() => setUserFocus(false)}
+                        />
+                        <p id="uidnote" className={`${userFocus && userName && !validName ?
+                            styles.instructions : styles.offscreen}`}>
+                            4 to 24 characters.<br/>
+                            Must begin with a letter.<br/>
+                            Letters, numbers, underscores, hyphens allowed.
+                        </p>
+                        <Form.Label htmlFor="password">Password:</Form.Label>
+                        <Form.Control
+                            className={`${pwdFocus && !validPwd ?
+                                styles.invalidBorder : ''}`}
+                            type="password"
+                            id="password"
+                            onChange={(e) => setPwd(e.target.value)}
+                            required
+                            aria-invalid={validPwd ? "false" : "true"}
+                            aria-describedby="pwdnote"
+                            onFocus={() => setPwdFocus(true)}
+                            onBlur={() => setPwdFocus(false)}
+                        />
+                        <p id="pwdnote" className={`${pwdFocus && !validPwd ?
+                            styles.instructions : styles.offscreen}`}>
+                            8 to 24 characters.<br/>
+                            Must include uppercase and lowercase letters, a number and a special
+                            character.<br/>
+                            Allowed special characters:
+                            <span aria-label="exclamation mark">!</span>
+                            <span aria-label="at symbol">@</span>
+                            <span aria-label="hashtag">#</ span>
+                            <span aria-label="dollar sign">$</span>
+                            <span aria-label="percent">%</span>
+                        </p>
+                        <Form.Label htmlFor="inputPassword">Repeat password:</Form.Label>
+                        <Form.Control
+                            className={`${matchPwdFocus && !validMatchPwd ?
+                                styles.invalidBorder : ''}`}
+                            type="password"
+                            id="confirm_pwd"
+                            onChange={(e) => setMatchPwd(e.target.value)}
+                            required
+                            aria-invalid={validMatchPwd ? "false" : "true"}
+                            aria-describedby="confirmnote"
+                            onFocus={() => setMatchPwdFocus(true)}
+                            onBlur={() => setMatchPwdFocus(false)}
+                        />
+                        <p id="confirmnote" className={`${matchPwdFocus && !validMatchPwd ?
+                            styles.instructions : styles.offscreen}`}>
+                            Passwords don't match.
+                        </p>
+                    </Modal.Body>
+                    <Modal.Footer className={styles.modalFooter}>
+                        <p className={styles.registered}>
+                            Already registered?
+                            <Button className={styles.logInButton}>Sign In</Button>
+                        </p>
+                        <div className={styles.buttonWrapper}>
+                            <Button className={styles.submitButton}
+                                    disabled={!validName || !validPwd || !validMatchPwd}
+                                    type="submit"
+                                    >Sign Up
+                            </Button>
+                            <Button className={styles.closeButton}
+                                    onClick={() => {
+                                        setUserName('');
+                                        setPwd('');
+                                        setMatchPwd('');
+                                        props.onHide();
+                            }}>
+                                Close
+                            </Button>
+                        </div>
+                    </Modal.Footer>
+                </Form>
             </Modal>
         </div>)
 }

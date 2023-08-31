@@ -18,16 +18,31 @@ export default function ResultModal(props) {
             <Modal.Body className={styles.modalBody}>
                 <Alert variant={props.variant} className={styles.resultAlert}>
                     {props.variant === "success" &&
-                        <div>Congratulations! The risk of lung cancer in your case is low.
+                        <div>
+                            <h2>
+                                LOW RISK
+                            </h2>
+                            Congratulations! The risk of lung cancer in your case is low.
                             Remember to continue to take
-                            care of your health! Keep it up!</div>}
+                            care of your health! Keep it up!
+                        </div>}
                     {props.variant === "warning" &&
-                        <div>It could have been better. Try to avoid potential hazards. Don't smoke, ensure frequent
-                            exposure to fresh, unpolluted air</div>}
+                        <div>
+                            <h2>
+                                MEDIUM RISK
+                            </h2>
+                            It could have been better. Try to avoid potential hazards. Don't smoke, ensure frequent
+                            exposure to fresh, unpolluted air
+                        </div>}
                     {props.variant === "danger" &&
-                        <div>You are in the risk group! Be sure to visit your doctor. Get tests done (spirometry, chest
+                        <div>
+                            <h2>
+                                HIGH RISK
+                            </h2>
+                            You are in the risk group! Be sure to visit your doctor. Get tests done (spirometry, chest
                             X-ray, CT scan of the lungs). It's worth taking matters into your own hands until it's too
-                            late!</div>}
+                            late!
+                        </div>}
                 </Alert>
             </Modal.Body>
             <Modal.Footer className={styles.modalFooter}>

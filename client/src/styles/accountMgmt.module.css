@@ -18,12 +18,15 @@
 .modalFooter {
     background-color: #ecdabe !important;
     border: #090a29 solid 2px !important;
+    display: flex !important;
+    justify-content: space-between !important;
 }
 
 .closeButton {
     background-color: #6884a9 !important;
     border: 0 !important;
     color: #ffffff !important;
+    align-self: flex-end !important;
 }
 
 .closeButton:hover {
@@ -36,12 +39,19 @@
     background-color: #598565 !important;
     border: 0 !important;
     color: #ffffff !important;
+    align-self: flex-end !important;
 }
 
 .submitButton:hover {
     background-color: #395747 !important;
     border: 0 !important;
     color: #ffffff !important;
+}
+
+.buttonWrapper {
+    width: 20% !important;
+    display: flex !important;
+    justify-content: space-between !important;
 }
 
 .instructions {
@@ -63,4 +73,44 @@
 
 .invalidBorder {
     border-color: #c55b5b !important;
+}
+
+.registered {
+    width: 30% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-evenly !important;
+}
+
+.logInButton {
+    color: #4b6db9;
+    background-color: transparent;
+    border-color: transparent;
+    padding: 10px !important;
+    text-decoration: underline;
+}
+
+.logInButton:hover {
+    background-color: transparent;
+    border-color: transparent;
+    color: #4f4c4c;
+}
+
+@media (max-width: 992px) {
+    .buttonWrapper {
+        width: 32% !important;
+    }
+
+    .registered {
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 545px) {
+    .modalFooter {
+        flex-direction: column-reverse !important;
+    }
+    .buttonWrapper {
+        width: 40% !important;
+    }
 }
