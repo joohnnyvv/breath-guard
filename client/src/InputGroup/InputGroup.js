@@ -39,7 +39,7 @@ export default function InputGroup() {
     const [result, setResult] = useState('');
 
     const handleDataSubmit = async () => {
-        const url = 'http://localhost:5000/get-prediction';
+        const url = 'https://lung-cancer-prediction-d3d07d9e4aad.herokuapp.com/get-prediction';
         const data = {user_data: userData};
 
         try {
