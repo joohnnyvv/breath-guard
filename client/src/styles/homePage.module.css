@@ -17,6 +17,16 @@
     width: 60%;
     text-align: right;
     line-height: 10px;
+    animation: resizeAnimation 1.5s ease-in-out;
+}
+
+@keyframes resizeAnimation {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @media (max-width: 1487px) {
@@ -63,10 +73,12 @@ a {
     border: 0;
     font-size: 24px;
     margin-top: 60px;
+    transition: transform 1s;
+    box-shadow: #4f4c4c 1px 1px 5px;
 }
 
 .startButton:hover {
-    background-color: #1c3d79;
+    transform: scale(1.05);
 }
 
 .predictorSectionBody {
