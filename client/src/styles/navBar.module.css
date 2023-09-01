@@ -1,8 +1,9 @@
 .navBarBody {
     height: 10vh;
-    background-color: #B5B9C9;
+    background-color: #f1f2f5;
     font-family: 'Roboto Slab', serif;
     font-size: 20px;
+    margin-bottom: 0;
 }
 
 .mailIcon {

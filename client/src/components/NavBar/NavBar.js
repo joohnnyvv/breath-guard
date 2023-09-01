@@ -12,7 +12,7 @@ export default function NavBar() {
     const [registerModalShow, setRegisterModalShow] = useState(false);
 
     return (
-        <div style={{position: "absolute", top: "0", width: "100vw", zIndex: "2"}}>
+        <div style={{position: "sticky", top: "0", width: "100vw", zIndex: "2"}}>
             <Navbar collapseOnSelect expand="lg" className={styles.navBarBody}>
                 <Container>
                     <Link to="/"><Navbar.Brand><img src={logo} style={{width: "180px"}}
