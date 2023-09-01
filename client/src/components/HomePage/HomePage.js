@@ -1,22 +1,23 @@
 import styles from "../../styles/homePage.module.css";
+import homePageBg from "../../assets/home-page-bg.jpg";
 import {Link} from "react-router-dom";
 import {SlGraph} from "react-icons/sl";
 
 export default function HomePage() {
     return (
         <>
-            <div className={styles.homePageBody}>
+            <div className={styles.homePageBody} style={{backgroundImage: `url(${homePageBg})`}}>
                 <div className={styles.titleWrapper}>
                     <h1>BreathGuard</h1><br/>
                     <h3>Ai-powered Lung Cancer</h3><br/>
                     <h3>Risk Predictor</h3>
-                </div>
-                <div>
-                    <Link to="/prediction"><button className={styles.startButton}>Get Started</button></Link>
+                    <div>
+                        <Link to="/prediction"><button className={styles.startButton}>Get Started</button></Link>
+                    </div>
                 </div>
             </div>
             <div className={styles.kaggleBody}>
-                <h2>Air Pollution and Lung Cancer</h2>
+                <h2 style={{fontWeight: "bold"}}>Air Pollution and Lung Cancer</h2>
                 <div className={styles.kaggleDesc}>
                     <h4 style={{width: "40%"}}>The artificial intelligence model uses a dataset from the <a
                         href="https://www.kaggle.com/datasets/thedevastator/c

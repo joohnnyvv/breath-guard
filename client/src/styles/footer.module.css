@@ -1,7 +1,5 @@
 
 .footerBody {
-    position: absolute;
-    bottom: -75vh;
     width: 100vw;
     height: 10vh;
     z-index: 2;

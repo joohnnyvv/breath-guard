@@ -4,11 +4,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import HomePage from "./components/HomePage/HomePage";
 import Footer from "./components/Footer/Footer";
+import styles from "./styles/app.module.css";
 
 function App() {
 
   return (
-      <>
+      <div className={styles}>
           <BrowserRouter>
               <NavBar />
                   <Routes>
@@ -17,7 +18,7 @@ function App() {
                   </Routes>
               <Footer />
           </BrowserRouter>
-      </>
+      </div>
   );
 }
 
