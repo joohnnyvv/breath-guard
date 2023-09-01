@@ -19,6 +19,13 @@
     line-height: 10px;
 }
 
+@media (max-width: 1487px) {
+    .titleWrapper {
+        text-align: left;
+        padding-left: 10%;
+    }
+}
+
 h1 {
     font-size: 100px;
     font-weight: bold;
@@ -68,13 +75,34 @@ a {
     text-align: left;
     line-height: 15px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
 }
 
 .aiPicture {
     height: 500px;
     width: auto;
-    margin-right: 200px;
+    margin-right: 100px;
+}
+
+@media (max-width: 1406px) {
+    .predictorSectionBody{
+        height: fit-content;
+        padding-top: 3%;
+    }
+}
+
+@media (max-width: 1135px) {
+    .kaggleDesc {
+        text-align: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .aiPicture {
+        margin-left: 10%;
+        height: 100px;
+    }
 }
 
 .preventionSectionBody {
@@ -94,6 +122,12 @@ a {
     line-height: 15px;
     display: flex;
     justify-content: space-evenly;
+}
+
+.doctorPicture {
+    height: 500px;
+    width: auto;
+    margin-right: 100px;
 }
 
 .addResourcesBody {

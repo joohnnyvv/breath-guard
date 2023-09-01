@@ -46,7 +46,7 @@ export default function HomePage() {
             <div className={styles.preventionSectionBody}>
                 <h2 style={{fontWeight: "bold"}}>Prevention Is Worth It</h2>
                 <div className={styles.preventionDesc}>
-                    <img src={medicalPicture} alt="Doctor" className={styles.aiPicture}/>
+                    <img src={medicalPicture} alt="Doctor" className={styles.doctorPicture}/>
                     <h4 style={{width: "40%"}}>In the pursuit of a healthier and happier life, taking proactive steps to
                         safeguard your well-being is paramount. Research has shown that even small changes in our daily
                         routines can make a significant difference in preventing diseases, including lung
