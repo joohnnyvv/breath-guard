@@ -54,11 +54,11 @@ export default function InputGroup() {
             const resultData = await response.json();
             setResult(resultData.prediction);
             if (resultData.prediction[0] === 0) {
-                setModalVariant("success");
+                setModalVariant("low");
             } else if (resultData.prediction[0] === 1) {
-                setModalVariant("warning");
+                setModalVariant("medium");
             } else if (resultData.prediction[0] === 2) {
-                setModalVariant("danger");
+                setModalVariant("high");
             }
             setModalShow(true);
         } catch (error) {
@@ -68,9 +68,9 @@ export default function InputGroup() {
 
     return (
         <div className={styles.inputGroupBody}>
-            <div className={styles.inputGroupLabel}>
-                ASSESS YOUR RISK OF DEVELOPING LUNG CANCER
-            </div>
+            <h1 className={styles.inputGroupLabel} style={{fontWeight: "bold"}}>
+                Assess your risk of developing lung cancer
+            </h1>
             <div className={styles.inputArea}>
                 {activePage === 1 && (
                     <AgeInput userData={userData} setUserData={setUserData}/>
@@ -130,7 +130,13 @@ export default function InputGroup() {
             <div className={styles.paginationStyle}>
                 <Button
                     className="mx-3"
-                    style={{height: "30px", display: "flex", alignItems: "center", backgroundColor: "#cccccc", borderColor: "#cccccc"}}
+                    style={{
+                        height: "30px",
+                        display: "flex",
+                        alignItems: "center",
+                        backgroundColor: "#3870d2",
+                        borderColor: "#3870d2"
+                    }}
                     onClick={() => {
                         activePage > 1 && setActivePage(activePage - 1);
                     }}
@@ -141,7 +147,13 @@ export default function InputGroup() {
                 <Button
                     disabled={activePage > userData.length}
                     className="mx-3"
-                    style={{height: "30px", display: "flex", alignItems: "center", backgroundColor: "#cccccc", borderColor: "#cccccc"}}
+                    style={{
+                        height: "30px",
+                        display: "flex",
+                        alignItems: "center",
+                        backgroundColor: "#3870d2",
+                        borderColor: "#3870d2"
+                    }}
                     onClick={() => {
                         activePage < 8 ? setActivePage(activePage + 1) : handleDataSubmit();
                     }}

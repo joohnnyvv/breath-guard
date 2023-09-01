@@ -1,27 +1,26 @@
 .modalFullBody {
-    backdrop-filter: blur(4px);
+    backdrop-filter: blur(8px);
     font-size: 30px;
 }
 
 .modalHeader {
-    background-color: #ecdabe;
-    font-family: 'Lato', sans-serif;
-    color: #000000;
-    border: #090a29 solid 2px !important;
+    background-color: #d1d6e1;
+    font-family: 'Roboto Slab', serif;
+    color: #121d4d;
 }
 
 .modalBody {
-    background-color: #ecdabe;
-    border-left: #090a29 solid 2px;
-    border-right: #090a29 solid 2px;
+    background-color: #d1d6e1;
+    color: #121d4d;
 }
 
 .modalFooter {
-    background-color: #ecdabe !important;
-    border: #090a29 solid 2px !important;
+    background-color: #d1d6e1 !important;
 }
 
 .resultAlert {
+    background-color: transparent !important;
+    border: 0 !important;
     font-family: 'Roboto Slab', serif;
     text-align: center;
 }
