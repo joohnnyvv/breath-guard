@@ -36,7 +36,6 @@ export default function InputGroup() {
         console.log(userData);
     }, [userData]);
 
-    const [result, setResult] = useState('');
 
     const handleDataSubmit = async () => {
         const url = 'https://lung-cancer-prediction-d3d07d9e4aad.herokuapp.com/get-prediction';
@@ -52,7 +51,6 @@ export default function InputGroup() {
             });
 
             const resultData = await response.json();
-            setResult(resultData.prediction);
             if (resultData.prediction[0] === 0) {
                 setModalVariant("low");
             } else if (resultData.prediction[0] === 1) {
@@ -135,7 +133,8 @@ export default function InputGroup() {
                         display: "flex",
                         alignItems: "center",
                         backgroundColor: "#3870d2",
-                        borderColor: "#3870d2"
+                        borderColor: "#3870d2",
+                        borderRadius: "40%"
                     }}
                     onClick={() => {
                         activePage > 1 && setActivePage(activePage - 1);
@@ -152,7 +151,8 @@ export default function InputGroup() {
                         display: "flex",
                         alignItems: "center",
                         backgroundColor: "#3870d2",
-                        borderColor: "#3870d2"
+                        borderColor: "#3870d2",
+                        borderRadius: "40%"
                     }}
                     onClick={() => {
                         activePage < 8 ? setActivePage(activePage + 1) : handleDataSubmit();

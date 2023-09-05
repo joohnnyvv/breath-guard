@@ -8,3 +8,8 @@
     border-color: #090a29 !important;
     color: #f0f2f3;
 }
+.page-item .page-link {
+    margin-left: 8px !important;
+    border-radius: 50% / 10% !important;
+    border-width: 0;
+}
