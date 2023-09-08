@@ -25,7 +25,9 @@ export default function SexInput({ userData, setUserData }) {
 
     return (
         <div className={styles.inputGroupSection}>
-            Select your sex:
+            <div>
+                Select your sex:
+            </div>
             <Form>
                 <div key={`default-checkbox`}>
                     <Form.Check

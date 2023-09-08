@@ -33,9 +33,11 @@ export default function RangeInput({
 
     return (
         <div className={styles.inputGroupSection}>
+            <div>
             {sectionLabel}
+            </div>
             <div className={styles.rangeLabels}>
-                <Form.Label style={{width: "50%", marginRight: "120px", alignSelf: "flex-end"}}>
+                <Form.Label style={{width: "50%", alignSelf: "flex-end"}}>
                     {minLabel}
                 </Form.Label>
                 <Form.Label style={{width: "50%",  alignSelf: "flex-end"}}>

@@ -21,7 +21,9 @@ export default function AgeInput({userData, setUserData}) {
 
     return (
         <div className={styles.inputGroupSection}>
+            <div>
             How old are you?
+            </div>
             <Form.Select style={{width: "80px", marginTop: "15px"}} onChange={handleAgeChange} value={selectedAge} size={"lg"}>
                 {Array.from({length: 99}, (_, index) => index + 1).map((age) => (
                     <option key={age} value={age}>
