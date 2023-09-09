@@ -10,8 +10,8 @@
 .inputGroupBody {
     height: 65%;
     width: 100%;
-    background-color: #d1d6e1;
-    box-shadow: #4f4c4c 5px 5px 10px;
+    background-color: #eff0f3;
+    box-shadow: #4f4c4c 2px 2px 5px;
     border-radius: 24px;
     animation-duration: 1.5s;
     animation-name: animate-pop;
@@ -74,7 +74,7 @@ a {
     animation-name: animate-fade;
     animation-delay: 1s;
     animation-fill-mode: backwards;
-    background-color: #e1e6ef;
+    background-color: #e6e9ef;
     border-radius: 12px 12px 0 0;
     padding-top: 20px;
     margin-bottom: 10%;
@@ -84,6 +84,7 @@ a {
     width: 10%;
     position: absolute;
     bottom: 320px;
+    left: 44%;
     display: flex;
     justify-content: space-between;
 }
@@ -116,7 +117,11 @@ a {
 }
 
 .inputArea {
-    width: 80%;
+    position: absolute;
+    width: 40%;
+    left: 29%;
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1296px) {

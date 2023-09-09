@@ -8,16 +8,17 @@ export default function Footer() {
         <div className={styles.footerBody}>
             <a
                 href='mailto:janekrembikowski@gmail.com?subject=Question about the BreathGuard app'
-                target="_blank">
+                target="_blank"
+                className={styles.mediaLink}>
                 <AiOutlineMail style={{height: "30px", width: "auto"}}/>
             </a>
-            <a href="https://github.com/joohnnyvv" target="_blank">
+            <a href="https://github.com/joohnnyvv" target="_blank" className={styles.mediaLink}>
                 <FaGithubSquare style={{height: "30px", width: "auto"}}/>
             </a>
-            <a href="https://www.linkedin.com/in/jan-rembikowski/" target="_blank">
+            <a href="https://www.linkedin.com/in/jan-rembikowski/" target="_blank" className={styles.mediaLink}>
                 <AiFillLinkedin style={{height: "30px", width: "auto"}}/>
             </a>
-            <a href="tel:123-456-789" target="_blank">
+            <a href="tel:123-456-789" target="_blank" className={styles.mediaLink}>
                 <AiFillPhone style={{height: "30px", width: "auto"}}/>
             </a>
         </div>

@@ -10,6 +10,7 @@ export default function AgeInput({userData, setUserData}) {
         const storedSelectedAge = localStorage.getItem("selectedAge");
         if (storedSelectedAge) {
             setSelectedAge(parseInt(storedSelectedAge, 10));
+            setUserData([parseInt(storedSelectedAge, 10), ...userData.slice(1)]);
         }
     }, []);
     const handleAgeChange = (event) => {

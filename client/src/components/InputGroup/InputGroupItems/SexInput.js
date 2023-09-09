@@ -10,6 +10,9 @@ export default function SexInput({ userData, setUserData }) {
         const storedSelectedSex = localStorage.getItem("selectedSex");
         if (storedSelectedSex) {
             setSelectedSex(parseInt(storedSelectedSex, 10));
+            const updatedUserData = [...userData];
+            updatedUserData[1] = parseInt(storedSelectedSex, 10);
+            setUserData(updatedUserData);
         }
     }, []);
 

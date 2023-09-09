@@ -152,7 +152,7 @@ export default function InputGroup() {
             />
         </div>
             <div className={styles.progressStyle}>
-                <LinearProgress variant="determinate" value={activePage /8 * 100} className={styles.customProgressBar}/>
+                <LinearProgress variant="determinate" value={activePage /8 * 100 - 1} className={styles.customProgressBar}/>
             </div>
         </div>
     );

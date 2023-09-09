@@ -174,8 +174,9 @@ a {
 .cardStyle {
     width: 18rem;
     margin-left: 30px;
+    padding: 18px;
     height: 360px;
-    box-shadow: #4f4c4c 2px 2px 30px;
+    box-shadow: #4f4c4c 2px 2px 8px;
     transition: transform 1s;
     border-radius: 15px;
 }

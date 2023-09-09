@@ -16,9 +16,12 @@ export default function RangeInput({
     const [selectedValue, setSelectedValue] = useState(4);
 
     useEffect(() => {
-        const storedSelectedSex = localStorage.getItem(localStorageItemName);
-        if (storedSelectedSex) {
-            setSelectedValue(parseInt(storedSelectedSex, 10));
+        const storedSelectedValue = localStorage.getItem(localStorageItemName);
+        if (storedSelectedValue) {
+            setSelectedValue(parseInt(storedSelectedValue, 10));
+            const updatedUserData = [...userData];
+            updatedUserData[dataIndex] = parseInt(storedSelectedValue, 10);
+            setUserData(updatedUserData);
         }
     }, []);
 
