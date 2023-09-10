@@ -1,6 +1,6 @@
 input[type="range"]::-webkit-slider-thumb {
-    background: #ffffff !important;
-    border: solid 1px #ffffff;
+    background: #3357cc !important;
+    border: solid 1px #3357cc;
 }
 
 input[type="range"]::-moz-range-thumb {
@@ -12,7 +12,6 @@ input[type="range"]::-ms-thumb {
 }
 
 input[type="range"]::-webkit-slider-runnable-track {
-    background: linear-gradient(to left, #cc343b, #28a833);
-    height: 2px !important;
-    width: 400px !important;
+    background: linear-gradient(to left, #267ce0, #cccccc);
+    height: 5px !important;
 }

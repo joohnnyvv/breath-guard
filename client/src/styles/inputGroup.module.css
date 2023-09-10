@@ -1,36 +1,9 @@
-.inputPage {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 0 20% 0 20%;
-}
-
-.inputGroupBody {
-    height: 65%;
-    width: 100%;
-    background-color: #eff0f3;
-    box-shadow: #4f4c4c 2px 2px 5px;
-    border-radius: 24px;
-    animation-duration: 1.5s;
-    animation-name: animate-pop;
-    animation-timing-function: cubic-bezier(.26, .53, .74, 1.48);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.navigationSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
 
 h1 {
     font-size: 100px;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
 }
 
 h2 {
@@ -50,126 +23,43 @@ a {
     text-decoration: none;
 }
 
-@keyframes animate-pop {
-    0% {
-        opacity: 0;
-        transform: scale(0.5, 0.5);
-    }
-
-    100% {
-        opacity: 1;
-        transform: scale(1, 1);
-    }
+.inputGroupBody {
+    background-color: #e6e9ef;
 }
 
 .inputGroupLabel {
-    text-align: center;
-    position: relative;
-    top: 0;
-    width: 100%;
-    height: 20%;
     font-family: 'Roboto Slab', serif;
     font-size: 40px;
-    animation-duration: 1s;
-    animation-name: animate-fade;
-    animation-delay: 1s;
-    animation-fill-mode: backwards;
     background-color: #e6e9ef;
-    border-radius: 12px 12px 0 0;
-    padding-top: 20px;
-    margin-bottom: 10%;
+    padding: 20px 0 20px 0;
+    text-align: center;
 }
 
 .buttonsWrapper {
-    width: 10%;
-    position: absolute;
-    bottom: 320px;
-    left: 44%;
     display: flex;
     justify-content: space-between;
+    margin-top: 40px;
 }
 
-@keyframes animate-fade {
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
 
 .inputGroupSection {
-    position: relative;
-    top: -40px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: center;
+    padding-top: 30px;
+    text-align: center;
     font-family: 'Roboto Slab', serif;
     font-size: 32px;
-    animation-duration: 2s;
-    animation-name: animate-fade;
-    animation-delay: 0s;
-    animation-fill-mode: backwards;
 }
 
 .rangeLabels {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    font-size: 18px;
-    margin-top: 10px;
-}
-
-.inputArea {
-    position: absolute;
-    width: 40%;
-    left: 29%;
-    display: flex;
-    justify-content: center;
-}
-
-@media screen and (max-width: 1296px) {
-    .inputGroupBody {
-        height: 70%;
-    }
-}
-
-@media screen and (max-width: 835px) {
-    .inputGroupBody {
-        height: 75%;
-        width: 100%;
-        margin-top: 25%;
-        border-radius: 0;
-        position: absolute;
-        left: 0;
-    }
-    .inputGroupLabel {
-        font-size: 25px;
-        margin-bottom: 0;
-        width: 100%;
-    }
-
-    .inputGroupSection {
-        font-size: 25px;
-        margin-top: 0;
-    }
-
-    .inputArea {
-        width: 100%;
-    }
-
-    .rangeLabels {
-        font-size: 15px;
-    }
-}
-
-.progressStyle {
-    width: 100%;
-}
-
-.confirmButton {
-    width: 160px;
-    font-size: 20px;
+    font-size: 22px;
     margin-top: 40px;
+    margin-bottom: 40px;
 }
 
 .customProgressBar {
     border-radius: 12px;
     height: 8px;
+    margin-top: 3%;
+    width: 70%;
 }

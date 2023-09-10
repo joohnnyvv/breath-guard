@@ -1,4 +1,4 @@
-import { Form } from "react-bootstrap";
+import {Form, Row} from "react-bootstrap";
 import { useEffect, useState } from "react";
 import styles from "../../../styles/inputGroup.module.css";
 import "../../../styles/custom-form-check.css";
@@ -27,7 +27,7 @@ export default function SexInput({ userData, setUserData }) {
 
 
     return (
-        <div className={styles.inputGroupSection}>
+        <Row className={styles.inputGroupSection}>
             <div>
                 Select your sex:
             </div>
@@ -57,6 +57,6 @@ export default function SexInput({ userData, setUserData }) {
                     />
                 </div>
             </Form>
-        </div>
+        </Row>
     );
 }

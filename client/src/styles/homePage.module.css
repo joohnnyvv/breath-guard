@@ -77,8 +77,7 @@ a {
 }
 
 .startButton:hover {
-    transform: scale(1.05);
-    box-shadow: #4f4c4c 1px 1px 5px;
+    background-color: #165bd9;
 }
 
 .predictorSectionBody {

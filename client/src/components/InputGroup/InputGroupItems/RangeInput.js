@@ -1,4 +1,4 @@
-import {Form} from "react-bootstrap";
+import {Container, Form, Row} from "react-bootstrap";
 import styles from "../../../styles/inputGroup.module.css";
 import {useEffect, useState} from "react";
 import "../../../styles/custom-range.css";
@@ -35,20 +35,22 @@ export default function RangeInput({
     }
 
     return (
-        <div className={styles.inputGroupSection}>
+        <Row className={styles.inputGroupSection}>
             <div>
             {sectionLabel}
             </div>
-            <div className={styles.rangeLabels}>
+            <Row className={styles.rangeLabels}>
                 <Form.Label style={{width: "50%", alignSelf: "flex-end"}}>
                     {minLabel}
                 </Form.Label>
                 <Form.Label style={{width: "50%",  alignSelf: "flex-end"}}>
                     {maxLabel}
                 </Form.Label>
-            </div>
-            <Form.Range min={1} max={8} onChange={handleValueChange}
-                        value={selectedValue}/>
-        </div>
+            </Row>
+            <Row className="justify-content-center">
+                <Form.Range min={1} max={8} onChange={handleValueChange}
+                            value={selectedValue} style={{width: "50%"}}/>
+            </Row>
+        </Row>
     )
 }

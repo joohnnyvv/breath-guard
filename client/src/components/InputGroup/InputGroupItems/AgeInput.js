@@ -1,6 +1,7 @@
 import Form from "react-bootstrap/Form";
 import {useEffect, useState} from "react";
 import styles from "../../../styles/inputGroup.module.css";
+import {Row} from "react-bootstrap";
 
 export default function AgeInput({userData, setUserData}) {
 
@@ -21,7 +22,7 @@ export default function AgeInput({userData, setUserData}) {
     };
 
     return (
-        <div className={styles.inputGroupSection}>
+        <Row className={styles.inputGroupSection}>
             <div>
             How old are you?
             </div>
@@ -32,6 +33,6 @@ export default function AgeInput({userData, setUserData}) {
                     </option>
                 ))}
             </Form.Select>
-        </div>
+        </Row>
     );
 }
