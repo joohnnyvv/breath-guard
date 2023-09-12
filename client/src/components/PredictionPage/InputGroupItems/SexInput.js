@@ -1,7 +1,7 @@
 import {Form, Row} from "react-bootstrap";
 import { useEffect, useState } from "react";
-import styles from "../../../styles/inputGroup.module.css";
-import "../../../styles/custom-form-check.css";
+import styles from "../../../styles/predictionPage.module.css";
+import "../../../styles/custom-bootstrap/custom-form-check.css";
 
 export default function SexInput({ userData, setUserData }) {
     const [selectedSex, setSelectedSex] = useState(null);
@@ -27,11 +27,9 @@ export default function SexInput({ userData, setUserData }) {
 
 
     return (
-        <Row className={styles.inputGroupSection}>
-            <div>
-                Select your sex:
-            </div>
+        <Row className={`mt-5 ${styles.inputGroupSection}`}>
             <Form>
+                <Form.Label className="mb-5">Select your sex:</Form.Label>
                 <div key={`default-checkbox`}>
                     <Form.Check
                         className="mx-4 custom-checkbox"

@@ -1,7 +1,6 @@
 import {Form, Row} from "react-bootstrap";
-import styles from "../../../styles/inputGroup.module.css";
+import styles from "../../../styles/predictionPage.module.css";
 import {useEffect, useState} from "react";
-import "../../../styles/custom-range.css";
 
 export default function RangeInput({
                                        userData,
@@ -35,11 +34,9 @@ export default function RangeInput({
     }
 
     return (
-        <Row className={styles.inputGroupSection}>
-            <div>
-            {sectionLabel}
-            </div>
-            <Row className={`mt-5 mb-4 ${styles.rangeLabels}`}>
+        <Row className={`mt-5 ${styles.inputGroupSection}`}>
+            <Form.Label className="mb-3">{sectionLabel}</Form.Label>
+            <Row className={`mb-2 ${styles.rangeLabels}`}>
                 <Form.Label style={{width: "50%", alignSelf: "flex-end"}}>
                     {minLabel}
                 </Form.Label>
