@@ -2,17 +2,14 @@ import styles from "../../styles/inputGroup.module.css";
 import AgeInput from "./InputGroupItems/AgeInput";
 import SexInput from "./InputGroupItems/SexInput";
 import RangeInput from "./InputGroupItems/RangeInput";
-import ResultModal from "../ResultModal/ResultModal";
 import {Button, Container, Row, Stack} from "react-bootstrap";
 import React, {useEffect, useState} from "react";
-import {FiArrowRight, FiArrowLeft} from "react-icons/fi";
 import {LinearProgress} from "@mui/material";
 
 export default function InputGroup() {
     const [userData, setUserData] = useState([]);
     const [activePage, setActivePage] = useState(1);
-    const [modalShow, setModalShow] = useState(false);
-    const [modalVariant, setModalVariant] = useState("");
+    const [progressValue, setProgressValue] = useState(0)
 
     useEffect(() => {
         console.log(userData);
@@ -33,14 +30,7 @@ export default function InputGroup() {
             });
 
             const resultData = await response.json();
-            if (resultData.prediction[0] === 0) {
-                setModalVariant("low");
-            } else if (resultData.prediction[0] === 1) {
-                setModalVariant("medium");
-            } else if (resultData.prediction[0] === 2) {
-                setModalVariant("high");
-            }
-            setModalShow(true);
+            console.log("Result data: ", resultData)
         } catch (error) {
             console.error('Error:', error);
         }
@@ -48,9 +38,9 @@ export default function InputGroup() {
 
     return (
         <Container fluid>
-            <Container className={`pb-5 pt-3 mt-3 ${styles.inputGroupBody}`}>
+            <Container className="pb-5 pt-5 mt-5 h-100">
                 <Row>
-                    <h1 className={styles.inputGroupLabel} style={{fontWeight: "bold"}}>
+                    <h1 className={`py-3 ${styles.inputGroupLabel}`} style={{fontWeight: "bold"}}>
                         Assess your risk of developing lung cancer
                     </h1>
                 </Row>
@@ -110,44 +100,46 @@ export default function InputGroup() {
                                         localStorageItemName="selectedPassiveSmokingAmount"/>
                         )}
                 </Row>
-                <Row className={styles.buttonsWrapper}>
-                    <Stack direction="horizontal" className="justify-content-center" gap={5}>
-                        <Button
-                            style={{
-                                height: "40px",
-                                display: "flex",
-                                alignItems: "center",
-                                backgroundColor: "#3870d2",
-                                borderColor: "#3870d2",
-                                borderRadius: "40%"
-                            }}
-                            onClick={() => {
-                                activePage > 1 && setActivePage(activePage - 1);
-                            }}
-                        >
-                            Prev
-                        </Button>
-                        <Button
-                            disabled={activePage > userData.length}
-                            style={{
-                                height: "40px",
-                                display: "flex",
-                                alignItems: "center",
-                                backgroundColor: "#3870d2",
-                                borderColor: "#3870d2",
-                                borderRadius: "40%"
-                            }}
-                            onClick={() => {
-                                activePage < 8 ? setActivePage(activePage + 1) : handleDataSubmit();
-                            }}
-                        >
-                            {activePage === 8 ? "Confirm" : "Next"}
-                        </Button>
-                    </Stack>
-                </Row>
             </Container>
-            <Row className="justify-content-center">
-                <LinearProgress variant="determinate" value={activePage /8 * 100 - 1}
+            <Row className="mt-2">
+                <Stack direction="horizontal" className="justify-content-center" gap={5}>
+                    <Button
+                        style={{
+                            height: "40px",
+                            display: "flex",
+                            alignItems: "center",
+                            backgroundColor: "#3870d2",
+                            borderColor: "#3870d2",
+                            borderRadius: "40%"
+                        }}
+                        onClick={() => {
+                            activePage > 1 && setActivePage(activePage - 1);
+                            setProgressValue(progressValue - 12.5)
+                        }}
+                    >
+                        Prev
+                    </Button>
+                    <Button
+                        disabled={activePage > userData.length}
+                        style={{
+                            height: "40px",
+                            display: "flex",
+                            alignItems: "center",
+                            backgroundColor: "#3870d2",
+                            borderColor: "#3870d2",
+                            borderRadius: "40%"
+                        }}
+                        onClick={() => {
+                            activePage < 8 ? setActivePage(activePage + 1) : handleDataSubmit();
+                            activePage === 8 ? setProgressValue(100) : setProgressValue(progressValue + 12.5)
+                        }}
+                    >
+                        {activePage === 8 ? "Confirm" : "Next"}
+                    </Button>
+                </Stack>
+            </Row>
+            <Row className="justify-content-center mt-5">
+                <LinearProgress variant="determinate" value={progressValue}
                                 className={styles.customProgressBar}/>
             </Row>
         </Container>

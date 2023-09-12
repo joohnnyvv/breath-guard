@@ -1,4 +1,4 @@
-import {Container, Form, Row} from "react-bootstrap";
+import {Form, Row} from "react-bootstrap";
 import styles from "../../../styles/inputGroup.module.css";
 import {useEffect, useState} from "react";
 import "../../../styles/custom-range.css";
@@ -39,7 +39,7 @@ export default function RangeInput({
             <div>
             {sectionLabel}
             </div>
-            <Row className={styles.rangeLabels}>
+            <Row className={`mt-5 mb-4 ${styles.rangeLabels}`}>
                 <Form.Label style={{width: "50%", alignSelf: "flex-end"}}>
                     {minLabel}
                 </Form.Label>
