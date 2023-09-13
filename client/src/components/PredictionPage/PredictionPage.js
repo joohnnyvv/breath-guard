@@ -110,8 +110,7 @@ export default function PredictionPage() {
                                     display: "flex",
                                     alignItems: "center",
                                     backgroundColor: "#3870d2",
-                                    borderColor: "#3870d2",
-                                    borderRadius: "40%"
+                                    borderColor: "#3870d2"
                                 }}
                                 onClick={() => {
                                     activePage > 1 && setActivePage(activePage - 1);
@@ -127,7 +126,6 @@ export default function PredictionPage() {
                                     alignItems: "center",
                                     backgroundColor: "#3870d2",
                                     borderColor: "#3870d2",
-                                    borderRadius: "40%"
                                 }}
                                 onClick={() => {
                                     activePage < 8 ? setActivePage(activePage + 1) : handleDataSubmit();
