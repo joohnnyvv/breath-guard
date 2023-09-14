@@ -2,12 +2,16 @@ import styles from "../../styles/predictionPage.module.css";
 import AgeInput from "./InputGroupItems/AgeInput";
 import SexInput from "./InputGroupItems/SexInput";
 import RangeInput from "./InputGroupItems/RangeInput";
-import {Button, Container, ProgressBar, Row, Stack} from "react-bootstrap";
+import {Button, Container, ProgressBar, Row, Spinner, Stack} from "react-bootstrap";
 import React, {useEffect, useState} from "react";
+import ResultPage from "./ResultPage/ResultPage";
 
 export default function PredictionPage() {
     const [userData, setUserData] = useState([]);
     const [activePage, setActivePage] = useState(1);
+    const [isResult, setIsResult] = useState(false);
+    const [predictionValue, setPredictionValue] = useState(-1);
+    const [isSpinner, setIsSpinner] = useState(false);
 
     useEffect(() => {
         console.log(userData);
@@ -17,6 +21,7 @@ export default function PredictionPage() {
     const handleDataSubmit = async () => {
         const url = 'https://lung-cancer-prediction-d3d07d9e4aad.herokuapp.com/get-prediction';
         const data = {user_data: userData};
+        setIsSpinner(true);
 
         try {
             const response = await fetch(url, {
@@ -28,22 +33,29 @@ export default function PredictionPage() {
             });
 
             const resultData = await response.json();
-            console.log("Result data: ", resultData)
+            setPredictionValue(parseInt(resultData.prediction));
+            setIsResult(true);
+            setIsSpinner(false);
+            console.log("Result data: ", parseInt(resultData.prediction))
         } catch (error) {
-            console.error('Error:', error);
+            console.error('Error:', error)
+            setIsSpinner(false);
         }
     }
 
     return (
-        <Container>
-            <Container fluid className={`pb-5 ${styles.predictionPageBody}`}>
-                <Container className="py-5 my-5 h-100">
-                    <Row>
-                        <h1 className={`pb-3 ${styles.inputGroupLabel}`} style={{fontWeight: "bold"}}>
-                            Assess your risk of developing lung cancer
-                        </h1>
-                    </Row>
-                    <Row>
+        isResult ? 
+            <ResultPage predictionValue={predictionValue}/> :
+            isSpinner ? <Spinner animation="border" className={styles.spinner}/> :
+            <Container>
+                <Container fluid className={`pb-5 mt-5 ${styles.predictionPageBody}`}>
+                    <Container className="py-5 my-5 h-100">
+                        <Row>
+                            <h1 className={`pb-3 ${styles.inputGroupLabel}`} style={{fontWeight: "bold"}}>
+                                Assess your risk of developing lung cancer
+                            </h1>
+                        </Row>
+                        <Row>
                             {activePage === 1 && (
                                 <AgeInput userData={userData} setUserData={setUserData}/>
                             )}
@@ -98,48 +110,48 @@ export default function PredictionPage() {
                                             dataIndex={7}
                                             localStorageItemName="selectedPassiveSmokingAmount"/>
                             )}
-                    </Row>
+                        </Row>
+                    </Container>
+                    <Container className="position-relative top-0">
+                        <Row>
+                            <Stack direction="horizontal" className="justify-content-center"
+                                   gap={5}>
+                                <Button
+                                    style={{
+                                        height: "40px",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        backgroundColor: "#3870d2",
+                                        borderColor: "#3870d2"
+                                    }}
+                                    onClick={() => {
+                                        activePage > 1 && setActivePage(activePage - 1);
+                                    }}
+                                >
+                                    Prev
+                                </Button>
+                                <Button
+                                    disabled={activePage > userData.length}
+                                    style={{
+                                        height: "40px",
+                                        display: "flex",
+                                        alignItems: "center",
+                                        backgroundColor: "#3870d2",
+                                        borderColor: "#3870d2",
+                                    }}
+                                    onClick={() => {
+                                        activePage < 8 ? setActivePage(activePage + 1) : handleDataSubmit();
+                                    }}
+                                >
+                                    {activePage === 8 ? "Confirm" : "Next"}
+                                </Button>
+                            </Stack>
+                        </Row>
+                    </Container>
                 </Container>
-                <Container className="position-relative top-0">
-                    <Row>
-                        <Stack direction="horizontal" className="justify-content-center"
-                               gap={5}>
-                            <Button
-                                style={{
-                                    height: "40px",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    backgroundColor: "#3870d2",
-                                    borderColor: "#3870d2"
-                                }}
-                                onClick={() => {
-                                    activePage > 1 && setActivePage(activePage - 1);
-                                }}
-                            >
-                                Prev
-                            </Button>
-                            <Button
-                                disabled={activePage > userData.length}
-                                style={{
-                                    height: "40px",
-                                    display: "flex",
-                                    alignItems: "center",
-                                    backgroundColor: "#3870d2",
-                                    borderColor: "#3870d2",
-                                }}
-                                onClick={() => {
-                                    activePage < 8 ? setActivePage(activePage + 1) : handleDataSubmit();
-                                }}
-                            >
-                                {activePage === 8 ? "Confirm" : "Next"}
-                            </Button>
-                        </Stack>
-                    </Row>
-                </Container>
+                <Row className="justify-content-center my-5">
+                    <ProgressBar visuallyHidden max={8} min={1} now={activePage} className={styles.customProgressBar}/>
+                </Row>
             </Container>
-            <Row className="justify-content-center my-5">
-                <ProgressBar visuallyHidden max={8} min={1} now={activePage} className={styles.customProgressBar}/>
-            </Row>
-        </Container>
     );
 }

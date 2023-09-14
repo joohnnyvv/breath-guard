@@ -46,5 +46,11 @@ a {
 .customProgressBar {
     height: 8px !important;
     width: 70% !important;
-    background-color: transparent !important;
+    background-color: #c4c4c4 !important;
+}
+
+.spinner {
+    position: absolute;
+    top: 50vh;
+    left: 45vw;
 }
