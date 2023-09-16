@@ -2,6 +2,6 @@
     font-family: 'Roboto Slab', serif;
 }
 
-small {
-    font-size: 25px;
+.toastBody {
+    transform: scale(2);
 }

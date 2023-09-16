@@ -9,18 +9,22 @@ export default function RangeInput({
                                        minLabel,
                                        maxLabel,
                                        dataIndex,
-                                       localStorageItemName
+                                       localStorageItemName,
+                                       setIsButtonDisabled
                                    }) {
 
     const [selectedValue, setSelectedValue] = useState(4);
 
     useEffect(() => {
         const storedSelectedValue = localStorage.getItem(localStorageItemName);
+        setIsButtonDisabled(false);
         if (storedSelectedValue) {
             setSelectedValue(parseInt(storedSelectedValue, 10));
             const updatedUserData = [...userData];
             updatedUserData[dataIndex] = parseInt(storedSelectedValue, 10);
             setUserData(updatedUserData);
+        } else {
+            setIsButtonDisabled(true);
         }
     }, []);
 
@@ -30,6 +34,7 @@ export default function RangeInput({
         const updatedUserData = [...userData];
         updatedUserData[dataIndex] = newPollutionValue;
         setUserData(updatedUserData);
+        setIsButtonDisabled(false);
         localStorage.setItem(localStorageItemName, newPollutionValue.toString());
     }
 

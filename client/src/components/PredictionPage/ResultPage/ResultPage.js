@@ -32,7 +32,7 @@ export default function ResultPage({ predictionValue }) {
     return (
             <Container className={`mt-5 ${styles.resultBody}`} fluid>
                 <ToastContainer position="middle-center">
-                    <Toast show={true} animation={false}>
+                    <Toast show={true} animation={false} className={styles.toastBody}>
                         <Toast.Header>
                             <strong className="me-auto">Breath Guard</strong>
                             <small>{timeElapsed < 60 ? `${timeElapsed} seconds ago` :

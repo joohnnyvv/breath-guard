@@ -3,16 +3,19 @@ import { useEffect, useState } from "react";
 import styles from "../../../styles/predictionPage.module.css";
 import "../../../styles/custom-bootstrap/custom-form-check.css";
 
-export default function SexInput({ userData, setUserData }) {
+export default function SexInput({ userData, setUserData, setIsButtonDisabled }) {
     const [selectedSex, setSelectedSex] = useState(null);
 
     useEffect(() => {
         const storedSelectedSex = localStorage.getItem("selectedSex");
+        setIsButtonDisabled(false);
         if (storedSelectedSex) {
             setSelectedSex(parseInt(storedSelectedSex, 10));
             const updatedUserData = [...userData];
             updatedUserData[1] = parseInt(storedSelectedSex, 10);
             setUserData(updatedUserData);
+        } else {
+            setIsButtonDisabled(true);
         }
     }, []);
 
@@ -22,6 +25,7 @@ export default function SexInput({ userData, setUserData }) {
         const updatedUserData = [...userData];
         updatedUserData[1] = sexValue;
         setUserData(updatedUserData);
+        setIsButtonDisabled(false);
         localStorage.setItem("selectedSex", sexValue.toString());
     };
 
