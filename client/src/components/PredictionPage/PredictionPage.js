@@ -1,4 +1,5 @@
 import styles from "../../styles/predictionPage.module.css";
+import data from "../../models/range-input-data.json";
 import AgeInput from "./InputGroupItems/AgeInput";
 import SexInput from "./InputGroupItems/SexInput";
 import RangeInput from "./InputGroupItems/RangeInput";
@@ -15,8 +16,8 @@ export default function PredictionPage() {
     const [isButtonDisabled, setIsButtonDisabled] = useState(false);
 
     useEffect(() => {
-        console.log(userData);
-    }, [userData]);
+        console.log(data);
+    }, [])
 
 
     const handleDataSubmit = async () => {
@@ -40,16 +41,16 @@ export default function PredictionPage() {
             console.log("Result data: ", parseInt(resultData.prediction))
         } catch (error) {
             console.error('Error:', error)
-            setIsSpinner(false);
+            setIsSpinner(true);
         }
     }
 
     return (
         isResult ?
-            <ResultPage predictionValue={predictionValue}/> :
+            <ResultPage predictionValue={predictionValue} setIsResult={setIsResult}/> :
             isSpinner ? <Spinner animation="border" className={styles.spinner}/> :
                 <Container>
-                    <Container fluid className={`pb-5 mt-5 ${styles.predictionPageBody}`}>
+                    <Container fluid="md" className={`pb-5 mt-5 ${styles.predictionPageBody}`}>
                         <Container className="py-5 my-5 h-100">
                             <Row>
                                 <h1 className={`pb-3 ${styles.inputGroupLabel}`} style={{fontWeight: "bold"}}>
@@ -67,56 +68,56 @@ export default function PredictionPage() {
                                 )}
                                 {activePage === 3 && (
                                     <RangeInput userData={userData} setUserData={setUserData}
-                                                sectionLabel="Evaluate air pollution where you live"
-                                                minLabel="Coastal/Mountainous Locations"
-                                                maxLabel="Lack of environmental regulations"
+                                                sectionLabel={data[0].sectionLabel}
+                                                minLabel={data[0].minLabel}
+                                                maxLabel={data[0].maxLabel}
                                                 dataIndex={2}
-                                                localStorageItemName="selectedPollution"
+                                                localStorageItemName={data[0].localStorageItemName}
                                                 setIsButtonDisabled={setIsButtonDisabled}/>
                                 )}
                                 {activePage === 4 && (
                                     <RangeInput userData={userData} setUserData={setUserData}
-                                                sectionLabel="How much alcohol do you use?"
-                                                minLabel="I do not drink alcohol at all"
-                                                maxLabel="I am an alcoholic addict"
+                                                sectionLabel={data[1].sectionLabel}
+                                                minLabel={data[1].minLabel}
+                                                maxLabel={data[1].maxLabel}
                                                 dataIndex={3}
-                                                localStorageItemName="selectedAlcoholUse"
+                                                localStorageItemName={data[1].localStorageItemName}
                                                 setIsButtonDisabled={setIsButtonDisabled}/>
                                 )}
                                 {activePage === 5 && (
                                     <RangeInput userData={userData} setUserData={setUserData}
-                                                sectionLabel="How do you assess your genetic risk for lung cancer?"
-                                                minLabel="None of my family members have had lung cancer"
-                                                maxLabel="Several close family members have had lung cancer"
+                                                sectionLabel={data[2].sectionLabel}
+                                                minLabel={data[2].minLabel}
+                                                maxLabel={data[2].maxLabel}
                                                 dataIndex={4}
-                                                localStorageItemName="selectedGeneticRisk"
+                                                localStorageItemName={data[2].localStorageItemName}
                                                 setIsButtonDisabled={setIsButtonDisabled}/>
                                 )}
                                 {activePage === 6 && (
                                     <RangeInput userData={userData} setUserData={setUserData}
-                                                sectionLabel="How severe a chronic lung disease do you suffer from?"
-                                                minLabel="I do not suffer from any chronic lung diseases"
-                                                maxLabel="I suffer from severe lung diseases"
+                                                sectionLabel={data[3].sectionLabel}
+                                                minLabel={data[3].minLabel}
+                                                maxLabel={data[3].maxLabel}
                                                 dataIndex={5}
-                                                localStorageItemName="selectedLungDisease"
+                                                localStorageItemName={data[3].localStorageItemName}
                                                 setIsButtonDisabled={setIsButtonDisabled}/>
                                 )}
                                 {activePage === 7 && (
                                     <RangeInput userData={userData} setUserData={setUserData}
-                                                sectionLabel="How much do you smoke?"
-                                                minLabel="I do not smoke at all"
-                                                maxLabel="I smoke more than a pack of cigarettes a day"
+                                                sectionLabel={data[4].sectionLabel}
+                                                minLabel={data[4].minLabel}
+                                                maxLabel={data[4].maxLabel}
                                                 dataIndex={6}
-                                                localStorageItemName="selectedSmokingAmount"
+                                                localStorageItemName={data[4].localStorageItemName}
                                                 setIsButtonDisabled={setIsButtonDisabled}/>
                                 )}
                                 {activePage === 8 && (
                                     <RangeInput userData={userData} setUserData={setUserData}
-                                                sectionLabel="How often are you around smokers?"
-                                                minLabel="Only when I pass them on the street"
-                                                maxLabel="I live with a smoker, who smokes at home"
+                                                sectionLabel={data[5].sectionLabel}
+                                                minLabel={data[5].minLabel}
+                                                maxLabel={data[5].maxLabel}
                                                 dataIndex={7}
-                                                localStorageItemName="selectedPassiveSmokingAmount"
+                                                localStorageItemName={data[5].localStorageItemName}
                                                 setIsButtonDisabled={setIsButtonDisabled}/>
                                 )}
                             </Row>

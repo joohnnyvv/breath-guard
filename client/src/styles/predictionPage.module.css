@@ -43,10 +43,14 @@ a {
     font-size: 22px;
 }
 
+@media(max-width: 547px){
+    .rangeLabels {
+        visibility: hidden;
+    }
+}
+
 .customProgressBar {
     height: 8px !important;
-    width: 70% !important;
-    background-color: #c4c4c4 !important;
 }
 
 .spinner {

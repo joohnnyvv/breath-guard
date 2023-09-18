@@ -1,0 +1,38 @@
+[
+  {
+    "sectionLabel": "Evaluate air pollution where you live",
+    "minLabel": "Coastal/Mountainous Locations",
+    "maxLabel": "Lack of environmental regulations",
+    "localStorageItemName": "selectedPollution"
+  },
+  {
+    "sectionLabel": "How much alcohol do you use?",
+    "minLabel": "I do not drink alcohol at all",
+    "maxLabel": "I am an alcoholic addict",
+    "localStorageItemName": "selectedAlcoholUse"
+  },
+  {
+    "sectionLabel": "How do you assess your genetic risk for lung cancer?",
+    "minLabel": "None of my family members have had lung cancer",
+    "maxLabel": "Several close family members have had lung cancer",
+    "localStorageItemName": "selectedGeneticRisk"
+  },
+  {
+    "sectionLabel": "How severe a chronic lung disease do you suffer from?",
+    "minLabel": "I do not suffer from any chronic lung diseases",
+    "maxLabel": "I suffer from severe lung diseases",
+    "localStorageItemName": "selectedLungDisease"
+  },
+  {
+    "sectionLabel": "How much do you smoke?",
+    "minLabel": "I do not smoke at all",
+    "maxLabel": "I smoke more than a pack of cigarettes a day",
+    "localStorageItemName": "selectedSmokingAmount"
+  },
+  {
+    "sectionLabel": "How often are you around smokers?",
+    "minLabel": "Only when I pass them on the street",
+    "maxLabel": "I live with a smoker, who smokes at home",
+    "localStorageItemName": "selectedPassiveSmokingAmount"
+  }
+]

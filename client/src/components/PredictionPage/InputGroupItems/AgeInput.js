@@ -37,7 +37,7 @@ export default function AgeInput({userData, setUserData, setIsButtonDisabled}) {
             <Col>
                 <Form.Group controlId="dob">
                     <Form.Label className="mb-5">When were you born?</Form.Label>
-                    <Form.Control className="w-25 mx-auto" name="dob" type="date"
+                    <Form.Control className="w-50 mx-auto" name="dob" type="date"
                     onChange={handleAgeChange} max={maxDate} value={chosenDate.toISOString().split('T')[0]}/>
                 </Form.Group>
             </Col>

@@ -3,5 +3,6 @@
 }
 
 .toastBody {
-    transform: scale(2);
+    font-size: 30px !important;
+    width: 700px !important;
 }
