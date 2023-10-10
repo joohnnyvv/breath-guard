@@ -6,22 +6,27 @@ import medicalPicture from "../../assets/medical.png";
 import alaLogo from "../../assets/ALAlogo.png";
 import nclLogo from "../../assets/NCLlogo.png";
 import wcrfiLogo from "../../assets/WCRFILogo.png";
-import {Card} from "react-bootstrap";
+import {Button, Card, Col, Container, Row} from "react-bootstrap";
 
 export default function HomePage() {
     return (
         <>
-            <div className={styles.homePageBody} style={{backgroundImage: `url(${homePageBg})`}}>
-                <div className={styles.titleWrapper}>
-                    <h1>BreathGuard</h1><br/>
-                    <h3>Ai-powered Lung Cancer</h3><br/>
-                    <h3>Risk Predictor</h3>
+            <div style={{backgroundImage: `url(${homePageBg})`}}>
+            <Container fluid className={styles.homePageBody}>
+                <Col sm={4} className={`ml-5 ${styles.titleWrapper}`}>
+                    <Row>
+                        <h1>BreathGuard</h1><br/>
+                    </Row>
+                    <Row>
+                        <h3>Ai-powered Lung Cancer Risk Predictor</h3>
+                    </Row>
                     <div>
                         <Link to="/prediction">
-                            <button className={styles.startButton}>Get Started</button>
+                            <Button className={styles.startButton} size="lg">Get Started</Button>
                         </Link>
                     </div>
-                </div>
+                </Col>
+            </Container>
             </div>
             <div className={styles.predictorSectionBody}>
                 <h2 style={{fontWeight: "bold"}}>Ai-Powered Predictor</h2>
@@ -65,7 +70,8 @@ export default function HomePage() {
                             <Card.Body className={styles.cardBody}>
                                 <Card.Title>World Cancer Research Fund</Card.Title>
                                 <Card.Text>
-                                    World Cancer Research Fund International examines how diet, weight and physical activity
+                                    World Cancer Research Fund International examines how diet, weight and physical
+                                    activity
                                     affect your risk of developing and surviving cancer.
                                 </Card.Text>
                             </Card.Body>
