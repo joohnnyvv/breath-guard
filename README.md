@@ -5,7 +5,7 @@ BreathGuard is a react web application that uses a machine learning model to pre
 
 ## Live Demo
 
-You can access the live demo of BreathGuard on [Netlify](https://your-app-name.netlify.app).
+You can access the live demo of BreathGuard on [Netlify](https://breath-guard.netlify.app/).
 
 ## Table of Contents
 
