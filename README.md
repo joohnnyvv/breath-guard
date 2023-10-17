@@ -3,6 +3,10 @@
 
 BreathGuard is a react web application that uses a machine learning model to predict lung cancer risk. The graphical interface is provided through an application written in [React](https://react.dev), using several libraries such as [react-bootstrap](https://react-bootstrap.netlify.app), and [react-icons](https://react-icons.github.io/react-icons/).
 
+## Live Demo
+
+You can access the live demo of BreathGuard on [Netlify](https://your-app-name.netlify.app).
+
 ## Table of Contents
 
 - [Machine Learning Model and API](#machine-learning-model-and-api)
